@@ -15,17 +15,24 @@ android {
             }
         }
     }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        ndkBuild {
-            path file("src/main/jni/Android.mk")
-        }
-    }
+//    externalNativeBuild {
+//        ndkBuild {
+//            path file("src/main/jni/Android.mk")
+//        }
+//    }
     lintOptions {
         //IJobService need NewApi
         warning 'NewApi','OnClick'
