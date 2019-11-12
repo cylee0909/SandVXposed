@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
+import android.util.Log;
 
 import com.flurry.android.FlurryAgent;
 import com.lody.virtual.client.core.VirtualCore;
@@ -14,6 +15,7 @@ import com.swift.sandhook.SandHook;
 import com.swift.sandhook.SandHookConfig;
 import com.trend.lazyinject.buildmap.Auto_ComponentBuildMap;
 import com.trend.lazyinject.lib.LazyInject;
+import com.trend.lazyinject.lib.utils.ProcessUtils;
 
 import io.virtualapp.delegate.MyAppRequestListener;
 import io.virtualapp.delegate.MyComponentDelegate;
@@ -36,7 +38,7 @@ public class VApp extends MultiDexApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        SandXposed.init();
+        SandXposed.init(base);
         mPreferences = base.getSharedPreferences("va", Context.MODE_MULTI_PROCESS);
         VASettings.ENABLE_IO_REDIRECT = true;
         VASettings.ENABLE_INNER_SHORTCUT = false;
@@ -68,6 +70,7 @@ public class VApp extends MultiDexApplication {
 
             @Override
             public void onVirtualProcess() {
+                L.v("virtual process : " + ProcessUtils.getProcessName(gApp));
                 //listener components
                 virtualCore.setComponentDelegate(new MyComponentDelegate());
                 //fake phone imei,macAddress,BluetoothAddress
