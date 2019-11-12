@@ -2,6 +2,8 @@ package io.virtualapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
@@ -16,6 +18,8 @@ import com.swift.sandhook.SandHookConfig;
 import com.trend.lazyinject.buildmap.Auto_ComponentBuildMap;
 import com.trend.lazyinject.lib.LazyInject;
 import com.trend.lazyinject.lib.utils.ProcessUtils;
+
+import java.util.List;
 
 import io.virtualapp.delegate.MyAppRequestListener;
 import io.virtualapp.delegate.MyComponentDelegate;
@@ -70,6 +74,16 @@ public class VApp extends MultiDexApplication {
 
             @Override
             public void onVirtualProcess() {
+                List<PackageInfo> packageInfos =  VirtualCore.get().getUnHookPackageManager().getInstalledPackages(0);
+                if (packageInfos != null) {
+                    for (int i = 0; i < packageInfos.size(); i++) {
+                        PackageInfo info = packageInfos.get(i);
+                        ApplicationInfo ai = info.applicationInfo;
+                        if (ai.metaData != null && ai.metaData.containsKey("xposedmodule")) {
+                            VirtualCore.get().addVisibleOutsidePackage(info.packageName);
+                        }
+                    }
+                }
                 L.v("virtual process : " + ProcessUtils.getProcessName(gApp));
                 //listener components
                 virtualCore.setComponentDelegate(new MyComponentDelegate());
