@@ -1296,5 +1296,14 @@
             android:exported="false"
             android:process=":p49" />
 
+        <receiver
+            android:name="com.lody.virtual.PackageBroadCastReceiver"
+            android:process="@string/engine_process_name">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <!--data 不要忘记添加-->
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

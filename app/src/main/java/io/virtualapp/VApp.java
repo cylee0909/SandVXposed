@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Debug;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
@@ -74,7 +76,7 @@ public class VApp extends MultiDexApplication {
 
             @Override
             public void onVirtualProcess() {
-                List<PackageInfo> packageInfos =  VirtualCore.get().getUnHookPackageManager().getInstalledPackages(0);
+                List<PackageInfo> packageInfos =  VirtualCore.get().getUnHookPackageManager().getInstalledPackages(PackageManager.GET_META_DATA);
                 if (packageInfos != null) {
                     for (int i = 0; i < packageInfos.size(); i++) {
                         PackageInfo info = packageInfos.get(i);
