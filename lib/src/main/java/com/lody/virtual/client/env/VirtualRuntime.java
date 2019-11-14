@@ -63,6 +63,10 @@ public class VirtualRuntime {
 
 
     public static boolean isArt() {
-        return System.getProperty("java.vm.version").startsWith("2");
+        try{return System.getProperty("java.vm.version").startsWith("2");}catch (Throwable e)
+        {
+            e.printStackTrace();
+            return true;
+        }
     }
 }

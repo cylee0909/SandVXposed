@@ -1,7 +1,10 @@
 package com.lody.virtual.client.hook.providers;
 
+import android.app.DownloadManager;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 
 import com.lody.virtual.client.core.VirtualCore;
 import com.lody.virtual.client.hook.base.MethodBox;

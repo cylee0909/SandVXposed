@@ -3,7 +3,9 @@ package com.lody.virtual.client.hook.proxies.location;
 import android.location.LocationManager;
 import android.location.LocationRequest;
 import android.os.Build;
+import android.widget.Toast;
 
+import com.lody.virtual.client.core.VirtualCore;
 import com.lody.virtual.client.hook.base.MethodProxy;
 import com.lody.virtual.client.hook.base.ReplaceLastPkgMethodProxy;
 import com.lody.virtual.client.ipc.VirtualLocationManager;
@@ -150,6 +152,11 @@ public class MethodProxies {
 
         @Override
         public Object call(Object who, Method method, Object... args) throws Throwable {
+            if (isFakeLocationEnable()) {
+                return Arrays.asList(
+                        LocationManager.GPS_PROVIDER
+                );
+            }
             return PROVIDERS;
         }
     }
@@ -254,6 +261,7 @@ public class MethodProxies {
 
         @Override
         public Object call(Object who, Method method, Object... args) throws Throwable {
+            // !IMPORTANT
             if (!isFakeLocationEnable()) {
                 return super.call(who, method, args);
             }

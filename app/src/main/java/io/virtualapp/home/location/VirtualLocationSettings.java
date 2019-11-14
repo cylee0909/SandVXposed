@@ -3,7 +3,6 @@ package io.virtualapp.home.location;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +17,7 @@ import com.lody.virtual.remote.vloc.VLocation;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
 import io.virtualapp.R;
 import io.virtualapp.abs.ui.VActivity;
 import io.virtualapp.abs.ui.VUiKit;

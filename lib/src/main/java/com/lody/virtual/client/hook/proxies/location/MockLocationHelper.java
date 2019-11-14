@@ -1,7 +1,5 @@
 package com.lody.virtual.client.hook.proxies.location;
 
-import android.util.Log;
-
 import com.lody.virtual.client.env.VirtualGPSSatalines;
 import com.lody.virtual.client.ipc.VirtualLocationManager;
 import com.lody.virtual.helper.utils.Reflect;
@@ -108,13 +106,14 @@ public class MockLocationHelper {
                 float[] snrs;
                 float[] elevations;
                 float[] azimuths;
+                float[] carrierFreqs = new float[0];
                 if (aClass == LocationManager.GnssStatusListenerTransport.TYPE) {
                     svCount = satalines.getSvCount();
                     int[] prnWithFlags = satalines.getPrnWithFlags();
                     snrs = satalines.getSnrs();
                     elevations = satalines.getElevations();
                     azimuths = satalines.getAzimuths();
-                    LocationManager.GnssStatusListenerTransport.onSvStatusChanged.call(transport, svCount, prnWithFlags, snrs, elevations, azimuths);
+                    LocationManager.GnssStatusListenerTransport.onSvStatusChanged.call(transport, svCount, prnWithFlags, snrs, elevations, azimuths, carrierFreqs);
                 } else if (aClass == LocationManager.GpsStatusListenerTransport.TYPE) {
                     svCount = satalines.getSvCount();
                     int[] prns = satalines.getPrns();

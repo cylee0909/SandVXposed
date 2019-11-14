@@ -2,6 +2,8 @@ package com.lody.virtual.client.core;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +13,13 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
+import android.content.pm.ShortcutInfo;
+import android.content.pm.ShortcutManager;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Icon;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.ConditionVariable;
 import android.os.IBinder;
@@ -41,8 +47,8 @@ import com.lody.virtual.helper.utils.BitmapUtils;
 import com.lody.virtual.os.VUserHandle;
 import com.lody.virtual.remote.InstallResult;
 import com.lody.virtual.remote.InstalledAppInfo;
-import com.lody.virtual.server.interfaces.IAppManager;
 import com.lody.virtual.server.ServiceCache;
+import com.lody.virtual.server.interfaces.IAppManager;
 import com.lody.virtual.server.interfaces.IAppRequestListener;
 import com.lody.virtual.server.interfaces.IPackageObserver;
 import com.lody.virtual.server.interfaces.IUiCallback;
@@ -365,7 +371,8 @@ public final class VirtualCore {
         try {
             return getService().isOutsidePackageVisible(pkg);
         } catch (RemoteException e) {
-            return VirtualRuntime.crash(e);
+            e.printStackTrace();
+            return false;
         }
     }
 
@@ -373,7 +380,8 @@ public final class VirtualCore {
         try {
             return getService().isAppInstalled(pkg);
         } catch (RemoteException e) {
-            return VirtualRuntime.crash(e);
+            e.printStackTrace();
+            return false;
         }
     }
 
@@ -401,10 +409,22 @@ public final class VirtualCore {
         if (ris == null || ris.size() <= 0) {
             return null;
         }
+        ActivityInfo activityInfo = null;
+        for (ResolveInfo resolveInfo : ris) {
+            if (resolveInfo.activityInfo.enabled) {
+                // select the first enabled component
+                activityInfo = resolveInfo.activityInfo;
+                break;
+            }
+        }
+
+        if (activityInfo == null) {
+            activityInfo = ris.get(0).activityInfo;
+        }
         Intent intent = new Intent(intentToResolve);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setClassName(ris.get(0).activityInfo.packageName,
-                ris.get(0).activityInfo.name);
+        intent.setClassName(activityInfo.packageName,
+                activityInfo.name);
         return intent;
     }
 

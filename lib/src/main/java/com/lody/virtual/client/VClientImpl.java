@@ -16,6 +16,7 @@ import android.content.res.Configuration;
 import android.os.Binder;
 import android.os.Build;
 import android.os.ConditionVariable;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.IInterface;
@@ -40,7 +41,6 @@ import com.lody.virtual.client.ipc.VActivityManager;
 import com.lody.virtual.client.ipc.VDeviceManager;
 import com.lody.virtual.client.ipc.VPackageManager;
 import com.lody.virtual.client.ipc.VirtualStorageManager;
-import com.lody.virtual.sandxposed.SandXposed;
 import com.lody.virtual.client.stub.VASettings;
 import com.lody.virtual.helper.compat.BuildCompat;
 import com.lody.virtual.helper.compat.StorageManagerCompat;
@@ -50,6 +50,7 @@ import com.lody.virtual.os.VUserHandle;
 import com.lody.virtual.remote.InstalledAppInfo;
 import com.lody.virtual.remote.PendingResultData;
 import com.lody.virtual.remote.VDeviceInfo;
+import com.lody.virtual.sandxposed.SandXposed;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -351,6 +352,7 @@ public final class VClientImpl extends IVClient.Stub {
                                 + ": " + e.toString(), e);
             }
         }
+
         VActivityManager.get().appDoneExecuting();
         VirtualCore.get().getComponentDelegate().afterApplicationCreate(mInitialApplication);
     }

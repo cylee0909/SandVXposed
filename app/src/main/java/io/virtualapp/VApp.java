@@ -5,29 +5,23 @@ import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.os.Debug;
-import android.support.multidex.MultiDexApplication;
-import android.util.Log;
 
-import com.flurry.android.FlurryAgent;
 import com.lody.virtual.client.core.VirtualCore;
 import com.lody.virtual.client.stub.VASettings;
-import com.lody.virtual.helper.utils.OSUtils;
 import com.lody.virtual.sandxposed.SandXposed;
-import com.swift.sandhook.SandHook;
-import com.swift.sandhook.SandHookConfig;
-import com.trend.lazyinject.buildmap.Auto_ComponentBuildMap;
-import com.trend.lazyinject.lib.LazyInject;
 import com.trend.lazyinject.lib.utils.ProcessUtils;
 
 import java.util.List;
 
+import androidx.multidex.MultiDexApplication;
 import io.virtualapp.delegate.MyAppRequestListener;
 import io.virtualapp.delegate.MyComponentDelegate;
 import io.virtualapp.delegate.MyPhoneInfoDelegate;
 import io.virtualapp.delegate.MyTaskDescriptionDelegate;
 import jonathanfinerty.once.Once;
+
+// import com.trend.lazyinject.buildmap.Auto_ComponentBuildMap;
+// import com.trend.lazyinject.lib.LazyInject;
 
 /**
  * @author Lody
@@ -59,19 +53,13 @@ public class VApp extends MultiDexApplication {
     public void onCreate() {
         gApp = this;
         super.onCreate();
-        lazyInjectInit();
+        // lazyInjectInit();
         VirtualCore virtualCore = VirtualCore.get();
         virtualCore.initialize(new VirtualCore.VirtualInitializer() {
 
             @Override
             public void onMainProcess() {
                 Once.initialise(VApp.this);
-                new FlurryAgent.Builder()
-                        .withLogEnabled(true)
-                        .withListener(() -> {
-                            // nothing
-                        })
-                        .build(VApp.this, "48RJJP7ZCZZBB6KMMWW5");
             }
 
             @Override
@@ -114,9 +102,11 @@ public class VApp extends MultiDexApplication {
         return getApp().mPreferences;
     }
 
+    /*
     private void lazyInjectInit() {
         LazyInject.init(this);
         LazyInject.addBuildMap(Auto_ComponentBuildMap.class);
     }
+    */
 
 }

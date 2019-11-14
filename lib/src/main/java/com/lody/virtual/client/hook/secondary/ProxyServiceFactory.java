@@ -35,7 +35,7 @@ public class ProxyServiceFactory {
 									return method.invoke(base, args);
 								} catch (InvocationTargetException e) {
 									if (e.getCause() != null) {
-										throw e.getCause();
+										e.printStackTrace();
 									}
 									throw e;
 								}
@@ -59,7 +59,7 @@ public class ProxyServiceFactory {
 									return method.invoke(base, args);
 								} catch (InvocationTargetException e) {
 									if (e.getCause() != null) {
-										throw e.getCause();
+										e.printStackTrace();
 									}
 									throw e;
 								}
@@ -84,7 +84,7 @@ public class ProxyServiceFactory {
 									return method.invoke(base, args);
 								} catch (InvocationTargetException e) {
 									if (e.getCause() != null) {
-										throw e.getCause();
+										e.printStackTrace();
 									}
 									throw e;
 								}
