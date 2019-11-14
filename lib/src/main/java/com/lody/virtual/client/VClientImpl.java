@@ -80,8 +80,6 @@ import mirror.android.view.ThreadedRenderer;
 import mirror.com.android.internal.content.ReferrerIntent;
 import mirror.dalvik.system.VMRuntime;
 import mirror.java.lang.ThreadGroupN;
-import sk.vpkg.provider.BanNotificationProvider;
-import sk.vpkg.xposed.XposedUtils;
 
 import static com.lody.virtual.os.VUserHandle.getUserId;
 
@@ -317,8 +315,7 @@ public final class VClientImpl extends IVClient.Stub {
             InvocationStubManager.getInstance().checkEnv(AppInstrumentation.class);
         }
 
-        if(XposedUtils.isEnabledXposed(packageName))
-            SandXposed.injectXposedModule(context, packageName, processName);
+        SandXposed.injectXposedModule(context, packageName, processName);
 
         mInitialApplication = LoadedApk.makeApplication.call(data.info, false, null);
 
@@ -445,7 +442,7 @@ public final class VClientImpl extends IVClient.Stub {
         }
         */
 
-        String szEnableRedirectStorage = BanNotificationProvider.getString(VirtualCore.get().getContext(),"StorageRedirect");
+        String szEnableRedirectStorage = null;
         if(szEnableRedirectStorage!=null)
         {
             try

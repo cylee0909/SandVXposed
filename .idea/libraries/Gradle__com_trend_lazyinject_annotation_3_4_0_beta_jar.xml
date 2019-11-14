@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.trend.lazyinject:annotation:3.4.0-beta@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trend.lazyinject/annotation/3.4.0-beta/9f57723c3fb685d4e31536ec3dcd082cb0fbd456/annotation-3.4.0-beta.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trend.lazyinject/annotation/3.4.0-beta/21037b57ebe359f52c3d84bd7df9174f28b11a19/annotation-3.4.0-beta-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trend.lazyinject/annotation/3.4.0-beta/68695060cb23726bbfe84421ab0a789b1753f4a0/annotation-3.4.0-beta-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

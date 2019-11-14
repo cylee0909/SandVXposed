@@ -14,7 +14,6 @@ import com.lody.virtual.helper.utils.VLog;
 
 import java.lang.reflect.Method;
 
-import sk.vpkg.notification.SKVPackageNotificationHook;
 
 /**
  * @author Lody
@@ -36,20 +35,10 @@ class MethodProxies {
             if (getHostPkg().equals(pkg)) {
                 return method.invoke(who, args);
             }
-            SKVPackageNotificationHook hHook = new SKVPackageNotificationHook();
             int idIndex = ArrayUtils.indexOfFirst(args, Integer.class);
             int id = (int) args[idIndex];
             int notificationIndex = ArrayUtils.indexOfFirst(args, Notification.class);
             Notification notification = (Notification) args[notificationIndex];
-            try
-            {
-                if (!hHook.ProcessNotificationWithoutTag(pkg, idIndex, notification))
-                    VLog.e(TAG,"enqueueNotification Error");
-            }
-            catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
 
             return 0;
             /*
@@ -81,7 +70,6 @@ class MethodProxies {
             if (getHostPkg().equals(pkg)) {
                 return method.invoke(who, args);
             }
-            SKVPackageNotificationHook hHook = new SKVPackageNotificationHook();
             int idIndex = ArrayUtils.indexOfFirst(args, Integer.class);
             int id = (int) args[idIndex];
             @SuppressLint("ObsoleteSdkInt")
@@ -89,15 +77,6 @@ class MethodProxies {
             String tag = (String) args[tagIndex];
             int notificationIndex = ArrayUtils.indexOfFirst(args, Notification.class);
             Notification notification = (Notification) args[notificationIndex];
-            try
-            {
-                if (!hHook.ProcessNotificationWithTag(pkg, tag, idIndex, notification))
-                    VLog.e(TAG,"enqueueNotificationWithTag Error");
-            }
-            catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
 
             return 0;
             /*
@@ -151,16 +130,6 @@ class MethodProxies {
             }
             String tag = (String) args[1];
             int id = (int) args[2];
-            SKVPackageNotificationHook hHook = new SKVPackageNotificationHook();
-            try
-            {
-                if (!hHook.ProcessCancelNotificationWithTag(pkg, tag, id))
-                    VLog.e(TAG,"cancelNotificationWithTag Error");
-            }
-            catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
 
             return 0;
             /*
@@ -192,16 +161,6 @@ class MethodProxies {
             String pkg = MethodParameterUtils.replaceFirstAppPkg(args);
             if (getHostPkg().equals(pkg)) {
                 return method.invoke(who, args);
-            }
-            SKVPackageNotificationHook hHook = new SKVPackageNotificationHook();
-            try
-            {
-                if (!hHook.ProcessRemoveAll(pkg))
-                    VLog.e(TAG,"cancelNotificationWithTag Error");
-            }
-            catch (Throwable e)
-            {
-                e.printStackTrace();
             }
             if (VirtualCore.get().isAppInstalled(pkg)) {
                 VNotificationManager.get().cancelAllNotification(pkg, getAppUserId());

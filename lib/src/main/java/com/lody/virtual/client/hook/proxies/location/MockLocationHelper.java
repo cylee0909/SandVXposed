@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.Locale;
 
 import mirror.android.location.LocationManager;
-import sk.vpkg.location.SKLocation;
 
 /**
  * @author Lody
@@ -21,29 +20,6 @@ public class MockLocationHelper {
         if (listener != null) {
             VirtualGPSSatalines satalines = VirtualGPSSatalines.get();
             try {
-                SKLocation location = VirtualLocationManager.get().getLocation();
-                if (location != null) {
-                    String date = new SimpleDateFormat("HHmmss:SS", Locale.US).format(new Date());
-                    String lat = getGPSLat(location.latitude);
-                    String lon = getGPSLat(location.longitude);
-                    String latNW = getNorthWest(location);
-                    String lonSE = getSouthEast(location);
-                    String $GPGGA = checksum(String.format("$GPGGA,%s,%s,%s,%s,%s,1,%s,692,.00,M,.00,M,,,", date, lat, latNW, lon, lonSE, satalines.getSvCount()));
-                    String $GPRMC = checksum(String.format("$GPRMC,%s,A,%s,%s,%s,%s,0,0,260717,,,A,", date, lat, latNW, lon, lonSE));
-                    if (LocationManager.GnssStatusListenerTransport.onNmeaReceived != null) {
-                        LocationManager.GnssStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), "$GPGSV,1,1,04,12,05,159,36,15,41,087,15,19,38,262,30,31,56,146,19,*73");
-                        LocationManager.GnssStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), $GPGGA);
-                        LocationManager.GnssStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), "$GPVTG,0,T,0,M,0,N,0,K,A,*25");
-                        LocationManager.GnssStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), $GPRMC);
-                        LocationManager.GnssStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), "$GPGSA,A,2,12,15,19,31,,,,,,,,,604,712,986,*27");
-                    } else if (LocationManager.GpsStatusListenerTransport.onNmeaReceived != null) {
-                        LocationManager.GpsStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), "$GPGSV,1,1,04,12,05,159,36,15,41,087,15,19,38,262,30,31,56,146,19,*73");
-                        LocationManager.GpsStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), $GPGGA);
-                        LocationManager.GpsStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), "$GPVTG,0,T,0,M,0,N,0,K,A,*25");
-                        LocationManager.GpsStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), $GPRMC);
-                        LocationManager.GpsStatusListenerTransport.onNmeaReceived.call(listener, System.currentTimeMillis(), "$GPGSA,A,2,12,15,19,31,,,,,,,,,604,712,986,*27");
-                    }
-                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -150,20 +126,6 @@ public class MockLocationHelper {
                 e.printStackTrace();
             }
         }
-    }
-
-    private static String getSouthEast(SKLocation location) {
-        if (location.longitude > 0.0d) {
-            return "E";
-        }
-        return "W";
-    }
-
-    private static String getNorthWest(SKLocation location) {
-        if (location.latitude > 0.0d) {
-            return "N";
-        }
-        return "S";
     }
 
     public static String getGPSLat(double v) {

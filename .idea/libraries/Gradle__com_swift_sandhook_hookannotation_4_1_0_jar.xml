@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.swift.sandhook:hookannotation:4.1.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.swift.sandhook/hookannotation/4.1.0/bcd6fe2fb932c9d707031810b50397550e41bd69/hookannotation-4.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.swift.sandhook/hookannotation/4.1.0/8ac75853c5ede2f7c622e5e3d28fe0251535d139/hookannotation-4.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.swift.sandhook/hookannotation/4.1.0/297104fac999d9d1ac4ff9ac2671ebb1d3d72c58/hookannotation-4.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

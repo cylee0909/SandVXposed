@@ -10,9 +10,6 @@ import com.lody.virtual.server.interfaces.IVirtualLocationManager;
 
 import java.util.List;
 
-import sk.vpkg.location.SKLocation;
-import sk.vpkg.location.getPkgLocation;
-
 /**
  * @author Lody
  */
@@ -127,44 +124,6 @@ public class VirtualLocationManager {
             getService().setGlobalNeighboringCell(cell);
         } catch (RemoteException e) {
             VirtualRuntime.crash(e);
-        }
-    }
-
-    public void setLocation(int userId, String pkg, SKLocation loc) {
-        try {
-            getService().setLocation(userId, pkg, loc);
-        } catch (RemoteException e) {
-            VirtualRuntime.crash(e);
-        }
-    }
-
-    public SKLocation getLocation(int userId, String pkg) {
-        try {
-            return getService().getLocation(userId, pkg);
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
-        return getPkgLocation.getLocFromPkg(pkg);
-    }
-
-    public SKLocation getLocation() {
-        return getPkgLocation.getLocFromPkg(MethodProxy.getAppPkg());
-        // return getLocation(MethodProxy.getAppUserId(), MethodProxy.getAppPkg());
-    }
-
-    public void setGlobalLocation(SKLocation loc) {
-        try {
-            getService().setGlobalLocation(loc);
-        } catch (RemoteException e) {
-            VirtualRuntime.crash(e);
-        }
-    }
-
-    public SKLocation getGlobalLocation() {
-        try {
-            return getService().getGlobalLocation();
-        } catch (RemoteException e) {
-            return VirtualRuntime.crash(e);
         }
     }
 }

@@ -29,8 +29,6 @@ import io.virtualapp.home.models.AppInfo;
 import io.virtualapp.home.models.AppInfoLite;
 import io.virtualapp.home.models.MultiplePackageAppData;
 import io.virtualapp.home.models.PackageAppData;
-import sk.vpkg.manager.RenameAppUtils;
-import sk.vpkg.provider.BanNotificationProvider;
 
 /**
  * @author Lody
@@ -74,29 +72,12 @@ public class AppRepository implements AppDataSource {
                         continue;
                     }
                     PackageAppData data = new PackageAppData(mContext, info);
-                    if (VirtualCore.get().isAppInstalledAsUser(0, info.packageName))
-                    {
-                        String lpIsSet = RenameAppUtils.getRenamedApp(data.packageName, 0);
-                        if (lpIsSet != null)
-                        {
-                            data.name = lpIsSet;
-                            models.add(data);
-                        } else
-                            models.add(data);
-                    }
                     int[] userIds = info.getInstalledUsers();
                     for (int userId : userIds)
                     {
-                        if (userId != 0)
-                        {
+                        if (userId != 0) {
                             data = new PackageAppData(mContext, info);
-                            String lpIsSet = RenameAppUtils.getRenamedApp(data.packageName, userId);
-                            if (lpIsSet != null)
-                            {
-                                data.name = lpIsSet;
-                                models.add(new MultiplePackageAppData(data, userId));
-                            } else
-                                models.add(new MultiplePackageAppData(data, userId));
+                            models.add(new MultiplePackageAppData(data, userId));
                         }
                     }
                 }

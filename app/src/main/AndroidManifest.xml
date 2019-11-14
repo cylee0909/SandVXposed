@@ -76,12 +76,6 @@
             android:name="sk.vpkg.live.WhiteService"
             android:enabled="true" />
 
-        <provider
-            android:name="sk.vpkg.provider.BanNotificationProvider"
-            android:authorities="sk.vpkg.provider.BanNotificationProvider"
-            android:exported="true"
-            android:readPermission="sk.vpkg.provider.READ" />
-
         <service
             android:name="com.sk.fwindow.skFloattingWin"
             android:enabled="true" />

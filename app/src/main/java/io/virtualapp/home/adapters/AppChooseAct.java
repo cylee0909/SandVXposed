@@ -17,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.lody.virtual.client.core.RomChecker;
 import com.lody.virtual.client.core.VirtualCore;
-import com.sk.installapp.InstallPkgAct;
 
 import java.util.Objects;
 
@@ -272,18 +271,6 @@ public class AppChooseAct extends AppCompatActivity
         }
         if (useSKInstaller)
         {
-            // 推荐使用安装器安装，选项更多
-            try
-            {
-                Intent lpInstaller = new Intent(VirtualCore.get().getContext(), InstallPkgAct.class);
-                lpInstaller.setData(Uri.parse(path));
-                startActivity(lpInstaller);
-                setResult(0x0);
-            } catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
-
             if(pActParent.getActivity()!=null)
                 pActParent.getActivity().finish();
         }

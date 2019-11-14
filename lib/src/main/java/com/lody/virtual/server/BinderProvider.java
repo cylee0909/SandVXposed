@@ -11,7 +11,6 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import com.lody.virtual.client.core.VirtualCore;
-import com.lody.virtual.client.stub.DaemonService;
 import com.lody.virtual.helper.compat.BundleCompat;
 import com.lody.virtual.helper.ipcbus.IPCBus;
 import com.lody.virtual.server.accounts.VAccountManagerService;
@@ -49,7 +48,6 @@ public final class BinderProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         Context context = getContext();
-        DaemonService.startup(context);
         if (!VirtualCore.get().isStartup()) {
             return true;
         }
@@ -87,7 +85,6 @@ public final class BinderProvider extends ContentProvider {
 
     public boolean onRestart(Context ctx)
     {
-        DaemonService.startup(ctx);
         if (!VirtualCore.get().isStartup()) {
             return true;
         }

@@ -8,8 +8,6 @@ import com.lody.virtual.helper.ipcbus.IPCSingleton;
 import com.lody.virtual.server.interfaces.INotificationManager;
 import com.lody.virtual.server.notification.NotificationCompat;
 
-import sk.vpkg.manager.silentapps;
-
 /**
  * Fake notification manager
  */
@@ -31,14 +29,6 @@ public class VNotificationManager {
     }
 
     public boolean dealNotification(int id, Notification notification, String packageName) {
-        try
-        {
-            if (silentapps.notifyBlackList.contains(packageName))
-                return false;
-        }catch (Throwable ignored)
-        {
-            // ignored
-        }
         if (notification == null) return false;
         return VirtualCore.get().getHostPkg().equals(packageName)
                 || mNotificationCompat.dealNotification(id, notification, packageName);
@@ -63,14 +53,6 @@ public class VNotificationManager {
     }
 
     public boolean areNotificationsEnabledForPackage(String packageName, int userId) {
-        try
-        {
-            if (silentapps.notifyBlackList.contains(packageName))
-                return false;
-        }catch (Throwable ignored)
-        {
-            // ignored
-        }
         try {
             return getService().areNotificationsEnabledForPackage(packageName, userId);
         } catch (RemoteException e) {

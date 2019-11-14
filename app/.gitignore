@@ -1,4 +1,4 @@
 /build
 /release
 *.apk
-src/main/res2
+*.iml

@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "D:\\DroidSDK\\ndk-bundle",
+  "ndkFolder": "D:\\Softs\\Android\\Sdk\\ndk-bundle",
   "messages": [
     {
       "level": "INFO",
@@ -7,7 +7,7 @@
     },
     {
       "level": "INFO",
-      "message": "ndk.dir in local.properties is D:\\DroidSDK\\ndk-bundle"
+      "message": "ndk.dir in local.properties is not set"
     },
     {
       "level": "INFO",
@@ -15,19 +15,15 @@
     },
     {
       "level": "INFO",
-      "message": "sdkFolder is D:\\DroidSDK"
+      "message": "sdkFolder is D:\\Softs\\Android\\Sdk"
     },
     {
       "level": "INFO",
-      "message": "Considering D:\\DroidSDK\\ndk-bundle by ndk.dir"
+      "message": "Considering D:\\Softs\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder"
     },
     {
       "level": "INFO",
-      "message": "Considering D:\\DroidSDK\\ndk-bundle in SDK ndk-bundle folder"
-    },
-    {
-      "level": "INFO",
-      "message": "Found requested ndk.dir (D:\\DroidSDK\\ndk-bundle) which has version 20.0.5594570"
+      "message": "No user requested version, choosing D:\\Softs\\Android\\Sdk\\ndk-bundle which is version 19.2.5345600"
     }
   ]
 }

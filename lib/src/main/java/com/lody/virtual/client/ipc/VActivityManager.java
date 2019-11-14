@@ -34,7 +34,6 @@ import java.util.Map;
 
 import mirror.android.app.ActivityThread;
 import mirror.android.content.ContentProviderNative;
-import sk.vpkg.provider.BanNotificationProvider;
 
 /**
  * @author Lody
@@ -87,13 +86,6 @@ public class VActivityManager {
         {
             if(info.metaData!=null)
             {
-                if (!is_checked)
-                {
-                    String szEnableRedirectStorage = BanNotificationProvider.getString(VirtualCore.get().getContext()
-                            , "enableFullScreen");
-                    if (szEnableRedirectStorage != null) is_fullscreen = true;
-                    is_checked = true;
-                }
                 if (is_fullscreen)
                 {
                     info.metaData.putString("android.max_aspect", "2.3");

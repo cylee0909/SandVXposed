@@ -36,13 +36,6 @@ import com.lody.virtual.client.ipc.VActivityManager;
 import com.lody.virtual.client.stub.ChooseTypeAndAccountActivity;
 import com.lody.virtual.os.VUserInfo;
 import com.lody.virtual.os.VUserManager;
-import com.sk.app.RenameApp;
-import com.sk.fwindow.skFloattingWin;
-import com.sk.installapp.ManualInstallAct;
-import com.sk.listapp.AppPwdSetting;
-import com.sk.listapp.XAppManager;
-import com.sk.verify.msVerify;
-import com.sk.vloc.VLocSetting;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -68,8 +61,6 @@ import io.virtualapp.home.models.safePackage;
 import io.virtualapp.home.repo.XAppDataInstalled;
 import io.virtualapp.widgets.TwoGearsView;
 import jonathanfinerty.once.Once;
-import sk.vpkg.provider.BanNotificationProvider;
-import sk.vpkg.sign.SKPackageGuard;
 
 import static androidx.recyclerview.widget.ItemTouchHelper.ACTION_STATE_DRAG;
 import static androidx.recyclerview.widget.ItemTouchHelper.DOWN;
@@ -78,7 +69,6 @@ import static androidx.recyclerview.widget.ItemTouchHelper.LEFT;
 import static androidx.recyclerview.widget.ItemTouchHelper.RIGHT;
 import static androidx.recyclerview.widget.ItemTouchHelper.START;
 import static androidx.recyclerview.widget.ItemTouchHelper.UP;
-import static com.sk.verify.msVerify.chkIsCotainsMyQQ;
 
 /**
  * @author Lody
@@ -150,8 +140,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
     }
 
     private void initMenu() {
-        Log.d(TAG, "SKKEY:"+SKPackageGuard.getSignature(this));
-
         mPopupMenu = new PopupMenu(new ContextThemeWrapper(this, R.style.Theme_AppCompat_Light), mMenuView);
         Menu menu = mPopupMenu.getMenu();
         setIconEnable(menu, true);
@@ -190,38 +178,10 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
                     }).show();
             return false;
         });
-        menu.add(R.string.sk_install_app_by_path).setIcon(R.drawable.ic_vs).setOnMenuItemClickListener(item -> {
-            startActivity(
-                    new Intent(
-                            this,
-                            ManualInstallAct.class
-                    )
-            );
-            return false;
-        });
-        menu.add("通知管理").setIcon(R.drawable.ic_notification).setOnMenuItemClickListener(item -> {
-            startActivity(new Intent(this, XAppManager.class));
-            return false;
-        });
-        menu.add("虚拟位置").setIcon(R.drawable.ic_loc).setOnMenuItemClickListener(item -> {
-            // startActivity(new Intent(this, VirtualLocationSettings.class));
-            startActivity(new Intent(this, VLocSetting.class));
-            return true;
-        });
         menu.add("设置").setIcon(R.drawable.ic_settings).setOnMenuItemClickListener(item -> {
             startActivity(new Intent(this, SettingAct.class));
             return false;
         });
-        menu.add(R.string.pwd_setting).setIcon(R.drawable.ic_sec).setOnMenuItemClickListener(item ->
-                {
-                    startActivity(
-                            new Intent(
-                                    this,
-                                    AppPwdSetting.class)
-                    );
-                    return false;
-                }
-        );
         menu.add(R.string.restartapp).setIcon(R.drawable.ic_restart).setOnMenuItemClickListener(item -> {
             AlertDialog.Builder hBuilder = new AlertDialog.Builder(HomeActivity.this);
             hBuilder.setTitle(R.string.restartapp).setMessage(R.string.ensurerestart);
@@ -257,8 +217,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
             hBuilder.setCancelable(false).create().show();
             return false;
         });
-        if(!(new msVerify().chkSign(getResources().getString(R.string.about_info))))
-            finish();
         mMenuView.setOnClickListener(v -> mPopupMenu.show());
     }
 
@@ -286,9 +244,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
         mDeleteAppTextView = (TextView) findViewById(R.id.delete_app_text);
         // 搜索
         mSearchView = (SearchView) findViewById(R.id.homeSearchApp);
-
-        if(!chkIsCotainsMyQQ(getResources().getString(R.string.about_info)))
-            throw new Exception("Invalid Package");
     }
 
     private void initLaunchpad() {
@@ -370,11 +325,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
             ((SwipeRefreshLayout)findViewById(R.id.swipeRefreshDesktop_HomeAct))
                     .setRefreshing(false);
         });
-        if (Once.beenDone("enable_floating_win"))
-        {
-            startService(new Intent
-                    (this, skFloattingWin.class));
-        }
     }
 
     public void RefreshDesktop()
@@ -602,7 +552,7 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
     @Override
     public void showUpdateTips()
     {
-        String szVersion = BanNotificationProvider.getString(this,"mVersion");
+        String szVersion = null;
         boolean showTip = false;
         String currentVersion = String.valueOf(packageCode(this));
         if(szVersion!=null)
@@ -610,16 +560,11 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
             if(!currentVersion.equals(szVersion))
             {
                 showTip = true;
-                BanNotificationProvider.remove(this,"mVersion");
-                BanNotificationProvider
-                        .save(this,"mVersion",currentVersion);
             }
         }
         else
         {
             showTip = true;
-            BanNotificationProvider
-                    .save(this,"mVersion",currentVersion);
         }
         if(showTip)
         {
@@ -671,9 +616,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
         addAppToLauncher(hInstalled);
         Toast.makeText(HomeActivity.this,R.string.appInstallTip,Toast.LENGTH_LONG)
                 .show();
-
-        if(!chkIsCotainsMyQQ(getResources().getString(R.string.about_info)))
-            throw new Exception("Invalid Package");
     }
 
     @Override
@@ -808,21 +750,6 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
                     }
                     else if(upAtRenameArea)
                     {
-                        try
-                        {
-                            Intent hIntent = new Intent(
-                                    HomeActivity.this, RenameApp.class);
-                            AppData appData = mLaunchpadAdapter.getList().get(viewHolder.getAdapterPosition());
-                            int userId = 0;
-                            if (appData instanceof MultiplePackageAppData)
-                                userId=((MultiplePackageAppData) appData).userId;
-                            String lpStr[] = {appData.getPackageName(),String.valueOf(userId)};
-                            hIntent.putExtra("appInfo", lpStr);
-                            startActivity(hIntent);
-                        }catch (Throwable e)
-                        {
-                            e.printStackTrace();
-                        }
                     }
                 }
                 dragHolder = null;

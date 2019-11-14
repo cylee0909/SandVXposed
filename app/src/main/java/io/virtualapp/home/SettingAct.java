@@ -24,19 +24,11 @@ import android.widget.Toast;
 
 import com.lody.virtual.client.core.VirtualCore;
 import com.lody.virtual.client.ipc.VActivityManager;
-import com.sk.app.SettingUtils;
-import com.sk.app.UpdateExistApp;
-import com.sk.fwindow.skFloattingWin;
-import com.sk.installapp.ManualInstallAct;
-import com.sk.listapp.AppDataManager;
-import com.sk.listapp.XAppManager;
 
 import java.util.List;
 
 import io.virtualapp.R;
 import jonathanfinerty.once.Once;
-import sk.vpkg.live.AutoRunUtils;
-import sk.vpkg.provider.BanNotificationProvider;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -222,8 +214,6 @@ public class SettingAct extends AppCompatPreferenceActivity
         {
             super.onCreate(savedInstanceState);
             AlertDialog.Builder hDialog = new AlertDialog.Builder(getActivity());
-            hDialog.setTitle(R.string.user_privacy_policy);
-            hDialog.setMessage(getResources().getString(R.string.user_privacy_policy_detail));
             hDialog.setPositiveButton(R.string.desktop, (dialog, which) ->
                     getActivity().finish());
             hDialog.setNegativeButton(R.string.back, (dialog, which) ->
@@ -387,9 +377,9 @@ public class SettingAct extends AppCompatPreferenceActivity
         public void onCreate(Bundle savedInstanceState)
         {
             super.onCreate(savedInstanceState);
-            Intent hAppInfoSettings=new Intent(getActivity(), XAppManager.class);
-            getActivity().startActivity(hAppInfoSettings);
-            getActivity().finish();
+//            Intent hAppInfoSettings=new Intent(getActivity(), XAppManager.class);
+//            getActivity().startActivity(hAppInfoSettings);
+//            getActivity().finish();
         }
 
         @Override
@@ -471,16 +461,6 @@ public class SettingAct extends AppCompatPreferenceActivity
                         }
                         try
                         {
-                            String ismakeMeLiveEnable = BanNotificationProvider.getString(
-                                    VirtualCore.get().getContext(),
-                                    "makeMeLive"
-                            );
-                            if(ismakeMeLiveEnable!=null)
-                            {
-                                BanNotificationProvider.remove(VirtualCore.get().getContext(),
-                                        "makeMeLive"
-                                        );
-                            }
                         }
                         catch (Throwable e)
                         {
@@ -496,18 +476,6 @@ public class SettingAct extends AppCompatPreferenceActivity
                 }
                 try
                 {
-                    String ismakeMeLiveEnable = BanNotificationProvider.getString(
-                            VirtualCore.get().getContext(),
-                            "makeMeLive"
-                    );
-                    if(ismakeMeLiveEnable==null)
-                    {
-                        BanNotificationProvider.save(VirtualCore.get().getContext(),
-                                "makeMeLive",
-                                "Enabled"
-                        );
-                    }
-                    SettingUtils.enterWhiteListSetting(VirtualCore.get().getContext());
                 }catch (Throwable e)
                 {
                     e.printStackTrace();
@@ -551,23 +519,9 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setTitle(R.string.SK_Settings).setNegativeButton(R.string.disable,
                     (dialog, which) ->
                     {
-                        if (Once.beenDone("enable_floating_win"))
-                        {
-                            Once.clearDone("enable_floating_win");
-                        }
-                        getActivity().stopService(new Intent
-                                (getActivity(), skFloattingWin.class));
-                        getActivity().finish();
                     });
             hDialog.setPositiveButton(R.string.enable, (dialog, which) ->
             {
-                if (!Once.beenDone("enable_floating_win"))
-                {
-                    Once.markDone("enable_floating_win");
-                }
-                getActivity().startService(new Intent
-                        (getActivity(), skFloattingWin.class));
-                getActivity().finish();
             })
                     .setCancelable(false);
             hDialog.create().show();
@@ -600,21 +554,9 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setTitle(R.string.SK_Settings).setNegativeButton(R.string.disable,
                     (dialog, which) ->
                     {
-                        String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"StorageRedirect");
-                        if(szEnableRedirectStorage!=null)
-                        {
-                            BanNotificationProvider.remove(getActivity(),"StorageRedirect");
-                        }
-                        getActivity().finish();
                     });
             hDialog.setPositiveButton(R.string.enable, (dialog, which) ->
             {
-                String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"StorageRedirect");
-                if(szEnableRedirectStorage==null)
-                {
-                    BanNotificationProvider.save(getActivity(),"StorageRedirect","Enabled");
-                }
-                getActivity().finish();
             })
                     .setCancelable(false);
             hDialog.create().show();
@@ -647,8 +589,6 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setMessage(R.string.sk_upgrade_localapp);
             hDialog.setPositiveButton(R.string.accept, (dialog, which) ->
             {
-                getActivity().startActivity(new Intent(getActivity(), UpdateExistApp.class));
-                getActivity().finish();
             })
                     .setNegativeButton(R.string.back, (dialog, which) -> getActivity().finish())
                     .setTitle(R.string.title_activity_update_exist_app)
@@ -678,9 +618,6 @@ public class SettingAct extends AppCompatPreferenceActivity
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_appset);
             setHasOptionsMenu(true);
-            if(getActivity()==null)return;
-            getActivity().startActivity(new Intent(getActivity(), AppDataManager.class));
-            getActivity().finish();
         }
 
         @Override
@@ -710,13 +647,9 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setTitle(R.string.enable_wakeup).setNegativeButton(R.string.disable,
                     (dialog, which) ->
                     {
-                        AutoRunUtils.disableWakeUp();
-                        getActivity().finish();
                     });
             hDialog.setPositiveButton(R.string.enable, (dialog, which) ->
             {
-                AutoRunUtils.enableWakeUp();
-                getActivity().finish();
             })
                     .setCancelable(false);
             hDialog.create().show();
@@ -749,21 +682,9 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setTitle(R.string.SK_Settings).setNegativeButton(R.string.disable,
                     (dialog, which) ->
                     {
-                        String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"enableFullScreen");
-                        if(szEnableRedirectStorage!=null)
-                        {
-                            BanNotificationProvider.remove(getActivity(),"enableFullScreen");
-                        }
-                        getActivity().finish();
                     });
             hDialog.setPositiveButton(R.string.enable, (dialog, which) ->
             {
-                String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"enableFullScreen");
-                if(szEnableRedirectStorage==null)
-                {
-                    BanNotificationProvider.save(getActivity(),"enableFullScreen","Enabled");
-                }
-                getActivity().finish();
             })
                     .setCancelable(false);
             hDialog.create().show();
@@ -796,21 +717,9 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setTitle(R.string.disable_app_adapt).setNegativeButton(R.string.enable,
                     (dialog, which) ->
                     {
-                        String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"disableAdaptApp");
-                        if(szEnableRedirectStorage==null)
-                        {
-                            BanNotificationProvider.save(getActivity(),"disableAdaptApp","disabled");
-                        }
-                        getActivity().finish();
                     });
             hDialog.setPositiveButton(R.string.disable, (dialog, which) ->
             {
-                String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"disableAdaptApp");
-                if(szEnableRedirectStorage!=null)
-                {
-                    BanNotificationProvider.remove(getActivity(),"disableAdaptApp");
-                }
-                getActivity().finish();
             })
                     .setCancelable(false);
             hDialog.create().show();
@@ -843,21 +752,9 @@ public class SettingAct extends AppCompatPreferenceActivity
             hDialog.setTitle(R.string.enable_app_scan).setNegativeButton(R.string.enable,
                     (dialog, which) ->
                     {
-                        String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"enablePackageScan");
-                        if(szEnableRedirectStorage==null)
-                        {
-                            BanNotificationProvider.save(getActivity(),"enablePackageScan","enabled");
-                        }
-                        getActivity().finish();
                     });
             hDialog.setPositiveButton(R.string.disable, (dialog, which) ->
             {
-                String szEnableRedirectStorage = BanNotificationProvider.getString(getActivity(),"enablePackageScan");
-                if(szEnableRedirectStorage!=null)
-                {
-                    BanNotificationProvider.remove(getActivity(),"enablePackageScan");
-                }
-                getActivity().finish();
             })
                     .setCancelable(false);
             hDialog.create().show();
@@ -924,17 +821,6 @@ public class SettingAct extends AppCompatPreferenceActivity
         public void onCreate(Bundle savedInstanceState)
         {
             super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.pref_appset);
-            setHasOptionsMenu(true);
-            Activity act = getActivity();
-            if(act==null)return;
-            act.startActivity(
-                    new Intent(
-                            act,
-                            ManualInstallAct.class
-                    )
-            );
-            act.finish();
         }
 
         @Override

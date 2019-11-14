@@ -14,9 +14,6 @@ import com.lody.virtual.remote.VDeviceInfo;
 
 import java.lang.reflect.Method;
 
-import sk.vpkg.location.SKLocation;
-import sk.vpkg.location.getPkgLocation;
-
 /**
  * @author Lody
  */
@@ -81,11 +78,6 @@ public abstract class MethodProxy {
     protected static boolean isFakeLocationEnable() {
         if(!is_checked)
         {
-            SKLocation theFckLoc = getPkgLocation.getLocFromPkg(VClientImpl.get().getCurrentPackage());
-            if(theFckLoc!=null)
-            {
-                is_enable_fackloc = true;
-            }
             is_checked = true;
         }
         return is_enable_fackloc;

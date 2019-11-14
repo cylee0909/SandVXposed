@@ -29,11 +29,7 @@ public class AppLocationAdapter extends BaseAdapterPlus<LocationData> {
         ViewHolder viewHolder = (ViewHolder) view.getTag();
         viewHolder.icon.setImageDrawable(item.icon);
         viewHolder.label.setText(item.name);
-        if (item.location != null && item.mode != 0) {
-            viewHolder.location.setText(item.location.latitude + "," + item.location.longitude);
-        } else {
-            viewHolder.location.setText("真实位置");
-        }
+        viewHolder.location.setText("真实位置");
     }
 
     static class ViewHolder extends BaseAdapterPlus.BaseViewHolder {

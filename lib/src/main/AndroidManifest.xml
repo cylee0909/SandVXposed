@@ -218,17 +218,6 @@
         android:required="false" />
 
     <application>
-        <service
-            android:name="sk.vpkg.live.WhiteService"
-            android:enabled="true"
-            android:exported="true"></service>
-        <service
-            android:name=".client.stub.DaemonService"
-            android:process="@string/engine_process_name" />
-        <service
-            android:name=".client.stub.DaemonService$InnerService"
-            android:process="@string/engine_process_name" />
-
         <activity
             android:name=".client.stub.ShortcutHandleActivity"
             android:exported="true"

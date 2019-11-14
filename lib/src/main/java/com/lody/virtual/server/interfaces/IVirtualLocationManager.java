@@ -6,8 +6,6 @@ import com.lody.virtual.remote.vloc.VCell;
 
 import java.util.List;
 
-import sk.vpkg.location.SKLocation;
-
 /**
  * @author Lody
  */
@@ -34,12 +32,4 @@ public interface IVirtualLocationManager {
     List<VCell> getAllCell(int userId, String pkg) throws RemoteException;
 
     List<VCell> getNeighboringCell(int userId, String pkg) throws RemoteException;
-
-    void setLocation(int userId, String pkg, SKLocation loc) throws RemoteException;
-
-    SKLocation getLocation(int userId, String pkg) throws RemoteException;
-
-    void setGlobalLocation(SKLocation loc) throws RemoteException;
-
-    SKLocation getGlobalLocation() throws RemoteException;
 }

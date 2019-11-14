@@ -10,8 +10,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.lody.virtual.client.core.VirtualCore;
-import com.sk.desktop.SKDesktop;
-import com.sk.verify.msVerify;
 import com.tencent.stat.StatConfig;
 import com.tencent.stat.StatService;
 
@@ -23,53 +21,24 @@ import io.virtualapp.home.FlurryROMCollector;
 import io.virtualapp.home.HomeActivity;
 import jonathanfinerty.once.Once;
 
-import static com.sk.verify.msVerify.chkIsCotainsMyQQ;
 
 public class SplashActivity extends VActivity {
 
     static private boolean is_initialized = false;
 
-    private void toDesktop()
-    {
-        if(Once.beenDone("useNewDesktop"))
-        {
-            HomeActivity.goHome(this);
-        }
-        else
-        {
-            SKDesktop.initDesktop(this);
-        }
+    private void toDesktop() {
+        HomeActivity.goHome(this);
     }
 
     private void bindAndInit()
     {
         toDesktop();
-        bindMTA();
         finish();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if(!chkIsCotainsMyQQ(getResources().getString(R.string.about_info))
-        || !(new msVerify().chkSign(getResources().getString(R.string.about_info))))
-        {
-            finish();
-            return;
-        }
-
-        if(is_initialized)
-        {
-            try
-            {
-                initMTA();
-            }catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
-            return;
-        }
         @SuppressWarnings("unused")
         boolean enterGuide = !Once.beenDone(Once.THIS_APP_INSTALL, VCommends.TAG_NEW_VERSION);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -82,21 +51,13 @@ public class SplashActivity extends VActivity {
                 Once.markDone("collect_flurry");
             }
             doActionInThread();
-            com.sk.SKAppLoad.InitApp.InitVApp();
             time = System.currentTimeMillis() - time;
             long delta = 5000L - time;
             if (delta > 0) {
                 VUiKit.sleep(delta);
             }
         }).done((res) -> {
-            try{
-                is_initialized = true;
-                initMTA();
-            }
-            catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
+            appLikeOnCreate();
         });
     }
 
@@ -131,42 +92,6 @@ public class SplashActivity extends VActivity {
         else
         {
             bindAndInit();
-        }
-    }
-
-    private void initMTA()
-    {
-        if(!Once.beenDone("user_privacy"))
-        {
-            AlertDialog.Builder hBuilder = new AlertDialog.Builder(this);
-            hBuilder.setTitle(R.string.user_privacy_policy);
-            hBuilder.setMessage(R.string.user_privacy_policy_detail);
-            hBuilder.setCancelable(false);
-            hBuilder.setNegativeButton(R.string.back, (dialogInterface, i) -> finish());
-            hBuilder.setPositiveButton(R.string.accept, (dialogInterface, i) ->
-            {
-                Once.markDone("user_privacy");
-                appLikeOnCreate();
-            });
-            hBuilder.create().show();
-        }
-        else
-        {
-            appLikeOnCreate();
-        }
-    }
-
-    private void bindMTA()
-    {
-        try
-        {
-            // [可选]设置是否打开debug输出，上线时请关闭，Logcat标签为"MtaSDK"
-            StatConfig.setDebugEnable(false);
-            // 基础统计API
-            StatService.registerActivityLifecycleCallbacks(this.getApplication());
-        }catch (Throwable e)
-        {
-            e.printStackTrace();
         }
     }
 

@@ -17,9 +17,6 @@ import java.util.LinkedList;
 
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedHelpers;
-import sk.vpkg.fasthook.ClassUtil;
-import sk.vpkg.provider.BanNotificationProvider;
-import sk.vpkg.sign.SKPackageGuard;
 
 public class EnvironmentSetup {
 
@@ -107,9 +104,6 @@ public class EnvironmentSetup {
         {
             XposedHelpers.findAndHookMethod(Process.class, "killProcess", int.class, g_Hook);
             XposedHelpers.findAndHookMethod(System.class, "exit", int.class, g_Hook);
-            String szEnableRedirectStorage = BanNotificationProvider.getString(context,"disableAdaptApp");
-            if(szEnableRedirectStorage!=null)
-                SKPackageGuard.antiXposedCheck(packageName);
         }catch (Throwable e)
         {
             e.printStackTrace();

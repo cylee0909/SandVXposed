@@ -67,8 +67,6 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicReference;
 
 import mirror.android.app.IServiceConnectionO;
-import sk.vpkg.live.AutoRunUtils;
-import sk.vpkg.provider.BanNotificationProvider;
 
 import static android.os.Process.killProcess;
 import static com.lody.virtual.os.VBinder.getCallingPid;
@@ -763,14 +761,6 @@ public class VActivityManagerService implements IActivityManager {
     private boolean checkKillApps()
     {
         if(isChecked)return cannotKillAllApps;
-        String ismakeMeLiveEnable = BanNotificationProvider.getString(
-                VirtualCore.get().getContext(),
-                "makeMeLive"
-        );
-        if(ismakeMeLiveEnable!=null)
-        {
-            cannotKillAllApps = true;
-        }
         isChecked = true;
         return cannotKillAllApps;
     }
@@ -1097,10 +1087,6 @@ public class VActivityManagerService implements IActivityManager {
                                              PendingResultData result) {
         synchronized (this) {
             ProcessRecord r = findProcessLocked(info.processName, vuid);
-            if (BROADCAST_NOT_STARTED_PKG && r == null) {
-                if(AutoRunUtils.chkIsCanAutoRun())
-                    r = startProcessIfNeedLocked(info.processName, getUserId(vuid), info.packageName);
-            }
             if (r != null && r.appThread != null) {
                 performScheduleReceiver(r.client, vuid, info, intent,
                         result);

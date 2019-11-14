@@ -13,7 +13,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import mirror.android.location.LocationManager;
-import sk.vpkg.location.SKLocation;
 
 
 public class GPSListenerThread extends TimerTask {
@@ -48,22 +47,6 @@ public class GPSListenerThread extends TimerTask {
         if (listeners != null) {
             try {
                 if (!listeners.isEmpty()) {
-                    SKLocation vLocation = VirtualLocationManager.get().getLocation();
-                    if (vLocation != null) {
-                        Location location = vLocation.getLocation();
-                        //noinspection unchecked
-                        Set<Map.Entry> entries = listeners.entrySet();
-                        for (Map.Entry entry : entries) {
-                            Object value = entry.getValue();
-                            if (value != null) {
-                                try {
-                                    LocationManager.ListenerTransport.onLocationChanged.call(value, location);
-                                } catch (Throwable e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    }
                 }
             } catch (Throwable e) {
                 e.printStackTrace();

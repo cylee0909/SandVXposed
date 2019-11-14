@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.swift.sandhook:xposedcompat:4.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e63f0ce94eedb8b5bde577942239f12b/xposedcompat-4.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e63f0ce94eedb8b5bde577942239f12b/xposedcompat-4.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.swift.sandhook/xposedcompat/4.1.0/f778546bb3d5f3d3feb17371cac1ed6737e2a699/xposedcompat-4.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.swift.sandhook/xposedcompat/4.1.0/f397e2ef7371ff8b66ed6e1e4b94a9814ad3f25f/xposedcompat-4.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

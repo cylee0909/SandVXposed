@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42ad5bcc-b5fb-4235-b2df-08e449600854" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomePresenterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomePresenterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/LoadingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/LoadingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/SettingAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/SettingAct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppChooseAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppChooseAct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppLocationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppLocationAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppPagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/MarkerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/MarkerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/VirtualLocationSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/VirtualLocationSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/models/LocationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/models/LocationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/repo/AppRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/repo/AppRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/splash/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/virtualapp/splash/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build_mini.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build_mini.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build_targets.command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build_targets.stderr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build_targets.stdout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/build_command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/build_command.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/build_model.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/build_model.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/build_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/build_output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/json_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/arm64-v8a/json_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build_targets.command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build_targets.stderr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build_targets.stdout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/VClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/VClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/core/VirtualCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/core/VirtualCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/base/MethodProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/base/MethodProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/DownloadProviderHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/DownloadProviderHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/ProviderHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/ProviderHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/GPSListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/GPSListenerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MethodProxies.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MethodProxies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MockLocationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MockLocationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/notification/MethodProxies.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/notification/MethodProxies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VActivityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VActivityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VNotificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VNotificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VirtualLocationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VirtualLocationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/sandxposed/EnvironmentSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/sandxposed/EnvironmentSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/BinderProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/BinderProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/am/VActivityManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/am/VActivityManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/interfaces/IVirtualLocationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/interfaces/IVirtualLocationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/location/VirtualLocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/location/VirtualLocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV14.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV21.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/VNotificationManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/VNotificationManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/jni/Android.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/jni/Android.mk" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="1bc399a3" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SandVXposed" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#820#841#0" expanded="true" />
+                <element signature="e#2502#2534#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_general.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Softs/Android/Sdk/platforms/android-29/android.jar!/android/app/Activity.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="891" column="5" selection-start-line="891" selection-start-column="5" selection-end-line="891" selection-end-column="5" />
+              <folding>
+                <element signature="e#26469#26470#0" expanded="true" />
+                <element signature="e#26520#26521#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/splash/SplashActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#1764#1791#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4f0e0304795abe7162902d116a261e45/mta-3.4.7-Release/jars/libs/mta-android-sdk-3.4.7.jar!/com/tencent/stat/StatService.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sk.vpkg.manager.silentapps</find>
+      <find>sk.vpkg.location</find>
+      <find>sk.vpkg</find>
+      <find>SKLocation</find>
+      <find>DaemonService</find>
+      <find>user_privacy_policy</find>
+      <find>ResultGen</find>
+      <find>appLikeOnCreate</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/lib/src/main/jni/Android.mk" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/repo/AppRepository.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/models/LocationData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/VirtualLocationSettings.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomePresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/LoadingActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/SettingAct.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/VNotificationManagerService.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV21.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV14.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/interfaces/IVirtualLocationManager.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/sandxposed/EnvironmentSetup.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VNotificationManager.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VirtualLocationManager.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VActivityManager.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/notification/MethodProxies.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/GPSListenerThread.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MethodProxies.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/ProviderHook.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/DownloadProviderHook.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/base/MethodProxy.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/core/VirtualCore.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/VClientImpl.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MockLocationHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/MarkerActivity.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/BinderProvider.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/location/VirtualLocationService.java" />
+        <option value="$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/am/VActivityManagerService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppLocationAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppChooseAct.java" />
+        <option value="$PROJECT_DIR$/lib/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/virtualapp/splash/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/app/.gitignore" />
+        <option value="$PROJECT_DIR$/lib/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/SandVXposed.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
+        <option value="$PROJECT_DIR$/.idea/runConfigurations.xml" />
+        <option value="$PROJECT_DIR$/SandVXposed.iml" />
+        <option value="$PROJECT_DIR$/app/app.iml" />
+        <option value="$PROJECT_DIR$/lib/lib.iml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Sources_SandVXposed_app_libs_TencentLocationSDK_v6_1_2_r1df4baaa_170627_1056_jar_unspecified_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Sources_SandVXposed_app_libs_TencentMapSDK_Raster_v_1_2_8_e45bcd0_jar_unspecified_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Sources_SandVXposed_app_libs_TencentMapSearch_v1_1_7_3207904_jar_unspecified_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_multidex_multidex_2_0_1_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_multidex_multidex_instrumentation_2_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_percentlayout_percentlayout_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_bigkoo_alertview_1_0_3_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_flurry_android_analytics_6_9_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_jonathanfinerty_once_once_1_0_3_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_kyleduo_switchbutton_library_1_4_6_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_nineoldandroids_library_2_4_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_qq_mta_mta_3_4_7_Release_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_swift_sandhook_hookannotation_4_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_swift_sandhook_hooklib_4_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_swift_sandhook_xposedcompat_4_1_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_mid_mid_4_06_Release_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_trend_lazyinject_annotation_3_4_0_beta_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_trend_lazyinject_lib_3_4_0_beta_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_zyao89_zloading_1_2_0_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_jdeferred_jdeferred_android_aar_1_2_4_aar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_jdeferred_jdeferred_core_1_2_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_2_jar.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SandVXposed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SandVXposed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="SandVXposed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SandVXposed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="SandVXposed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="wingtech-2014813-1bc399a3" />
+    <property name="DEBUGGABLE_PROCESS" value="io.virtualapp.sandvxposed" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42ad5bcc-b5fb-4235-b2df-08e449600854" name="Default Changelist" comment="" />
+      <created>1573717709225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573717709225</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.19098713" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info anchor="bottom" id="Logcat" weight="0.49310344" />
+      <window_info anchor="bottom" id="Version Control" weight="0.30114943" />
+      <window_info anchor="bottom" id="TODO" weight="0.32848233" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" weight="0.24597701" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32848233" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" visible="true" weight="0.30574712" />
+      <window_info anchor="bottom" id="Build" weight="0.23678161" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Preview" weight="0.3299356" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.28489795" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Resources Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.33180252" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.39380023" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.5074627" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.35062242" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.3295063" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5004082" side_tool="true" weight="0.373444" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.04367816" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49959183" weight="0.41286308" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.57261413" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.27591836" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.32979593" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Hierarchy" order="6" weight="0.44796136" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/splash/SplashActivity.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="OCSymbolicBreakpointType">
+          <properties>
+            <option name="moduleName" value="libart.so" />
+            <option name="symbolPattern" value="art_sigsegv_fault" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/VApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/jni/Android.mk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="95" column="19" lean-forward="true" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/repo/AppRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/models/LocationData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/VirtualLocationSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Softs/Android/Sdk/platforms/android-29/android.jar!/android/content/Intent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="378" column="11" selection-start-line="378" selection-start-column="11" selection-end-line="378" selection-end-column="11" />
+          <folding>
+            <element signature="e#28186#28187#0" expanded="true" />
+            <element signature="e#28237#28238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomePresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="451" column="13" lean-forward="true" selection-start-line="451" selection-start-column="13" selection-end-line="451" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/LoadingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="314" selection-start-line="314" selection-end-line="314" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/SettingAct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="909">
+          <caret line="824" lean-forward="true" selection-start-line="824" selection-end-line="824" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#21021#21041#0" expanded="true" />
+            <element signature="e#21568#21583#0" expanded="true" />
+            <element signature="e#22983#22999#0" expanded="true" />
+            <element signature="e#30063#30064#0" expanded="true" />
+            <element signature="e#30121#30122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/VNotificationManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV21.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="109" column="31" lean-forward="true" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/notification/NotificationCompatCompatV14.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/interfaces/IVirtualLocationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/sandxposed/EnvironmentSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1229">
+          <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VNotificationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-377">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VirtualLocationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/ipc/VActivityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="88" column="14" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/notification/MethodProxies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-367">
+          <caret line="164" column="13" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/GPSListenerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MethodProxies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="120" column="13" lean-forward="true" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/ProviderHook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/base/MethodBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/providers/DownloadProviderHook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/base/MethodProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/core/VirtualCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-617">
+          <caret line="636" column="13" selection-start-line="636" selection-start-column="13" selection-end-line="636" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/VClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="521" column="90" selection-start-line="521" selection-start-column="90" selection-end-line="521" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/client/hook/proxies/location/MockLocationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/location/MarkerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/BinderProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="226" column="59" selection-start-line="226" selection-start-column="59" selection-end-line="226" selection-end-column="59" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/location/VirtualLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/main/java/com/lody/virtual/server/am/VActivityManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppLocationAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/adapters/AppChooseAct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#820#841#0" expanded="true" />
+            <element signature="e#2502#2534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_general.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Softs/Android/Sdk/platforms/android-29/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="891" column="5" selection-start-line="891" selection-start-column="5" selection-end-line="891" selection-end-column="5" />
+          <folding>
+            <element signature="e#26469#26470#0" expanded="true" />
+            <element signature="e#26520#26521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/home/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4f0e0304795abe7162902d116a261e45/mta-3.4.7-Release/jars/libs/mta-android-sdk-3.4.7.jar!/com/tencent/stat/StatService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/virtualapp/splash/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#1764#1791#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

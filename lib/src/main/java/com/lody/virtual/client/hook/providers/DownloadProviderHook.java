@@ -11,7 +11,6 @@ import com.lody.virtual.client.hook.base.MethodBox;
 
 import java.lang.reflect.InvocationTargetException;
 
-import sk.vpkg.provider.MProvider;
 
 /**
  * @author Lody
@@ -68,6 +67,6 @@ class DownloadProviderHook extends ExternalProviderHook {
     @Override
     public Cursor query(MethodBox methodBox, Uri url, String[] projection, String selection, String[] selectionArgs, String sortOrder, Bundle originQueryArgs) throws InvocationTargetException {
         Cursor cursor = super.query(methodBox, url, projection, selection, selectionArgs, sortOrder, originQueryArgs);
-        return new MProvider.QueryRedirectCursor(cursor, DownloadManager.COLUMN_LOCAL_FILENAME);
+        return null;
     }
 }

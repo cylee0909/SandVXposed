@@ -59,10 +59,6 @@ import java.util.List;
 
 import dalvik.system.DexFile;
 import mirror.android.app.ActivityThread;
-import sk.vpkg.location.getPkgLocation;
-import sk.vpkg.manager.RenameAppUtils;
-import sk.vpkg.notification.SKVPackageNotificationHook;
-import sk.vpkg.xposed.XposedUtils;
 
 /**
  * @author Lody
@@ -630,13 +626,6 @@ public final class VirtualCore {
 
     public boolean uninstallPackageAsUser(String pkgName, int userId) {
         try {
-            try{
-                RenameAppUtils.undoRenameByUid(pkgName, userId);
-            }
-            catch (Throwable e)
-            {
-                e.printStackTrace();
-            }
             return getService().uninstallPackageAsUser(pkgName, userId);
         } catch (RemoteException e) {
             // Ignore
@@ -645,24 +634,6 @@ public final class VirtualCore {
     }
 
     public boolean uninstallPackage(String pkgName) {
-        try{
-            RenameAppUtils.undoRenameByUid(pkgName, 0);
-        }
-        catch (Throwable e)
-        {
-            e.printStackTrace();
-        }
-        try
-        {
-            SKVPackageNotificationHook hHook = new SKVPackageNotificationHook();
-            hHook.CleanPackage(pkgName);
-        }
-        catch (Throwable e)
-        {
-            e.printStackTrace();
-        }
-        getPkgLocation.removeLocFromPkg(pkgName);
-        XposedUtils.clearXposed(pkgName);
         try {
             return getService().uninstallPackage(pkgName);
         } catch (RemoteException e) {

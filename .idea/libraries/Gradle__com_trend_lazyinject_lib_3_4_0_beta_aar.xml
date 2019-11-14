@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.trend.lazyinject:lib:3.4.0-beta@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ad7940b4c4c4ceffce858993b8d2478/lib-3.4.0-beta/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ad7940b4c4c4ceffce858993b8d2478/lib-3.4.0-beta/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trend.lazyinject/lib/3.4.0-beta/39ea324e21911f9beb8a18e342cd3c9b6eab91db/lib-3.4.0-beta-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trend.lazyinject/lib/3.4.0-beta/1c0905084504207a61cef91705bb763750bb056b/lib-3.4.0-beta-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

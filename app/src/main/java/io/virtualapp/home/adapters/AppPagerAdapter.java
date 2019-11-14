@@ -18,7 +18,6 @@ import java.util.List;
 import io.virtualapp.R;
 import io.virtualapp.VApp;
 import io.virtualapp.home.ListAppFragment;
-import sk.vpkg.provider.BanNotificationProvider;
 
 /**
  * @author Lody
@@ -36,7 +35,7 @@ public class AppPagerAdapter extends FragmentPagerAdapter {
         // JNI处理的思路是，JNI里面获取路径，然后去掉那些中文和emoji之类的，
         // 再返回到Java层。主要引起崩溃的函数是dir.listFiles()，目前无解。
         // 懒得搞了，大家自己玩吧。
-        String szEnableRedirectStorage = BanNotificationProvider.getString(VApp.getApp(),"enablePackageScan");
+        String szEnableRedirectStorage = null;
         if(szEnableRedirectStorage!=null)
         {
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)

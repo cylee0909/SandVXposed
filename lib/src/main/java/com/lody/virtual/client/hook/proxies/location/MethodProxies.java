@@ -17,7 +17,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import mirror.android.location.LocationRequestL;
-import sk.vpkg.location.SKLocation;
 
 /**
  * @author Lody
@@ -119,12 +118,6 @@ public class MethodProxies {
                 fixLocationRequest(request);
             }
             if (isFakeLocationEnable()) {
-                SKLocation loc = VirtualLocationManager.get().getLocation();
-                if (loc != null) {
-                    return loc.toSysLocation();
-                } else {
-                    return null;
-                }
             }
             return super.call(who, method, args);
         }

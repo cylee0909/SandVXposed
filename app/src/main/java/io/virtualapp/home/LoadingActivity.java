@@ -29,10 +29,6 @@ import com.lody.virtual.client.core.VirtualCore;
 import com.lody.virtual.client.ipc.VActivityManager;
 import com.lody.virtual.client.ipc.VPackageManager;
 import com.lody.virtual.server.pm.parser.VPackage;
-import com.sk.verify.SKAppLock;
-import com.sk.verify.SKAppLockCallBack;
-import com.sk.verify.SKLockUtil;
-import com.sk.verify.msVerify;
 
 import java.lang.reflect.Field;
 import java.util.HashSet;
@@ -46,7 +42,6 @@ import io.virtualapp.abs.ui.VUiKit;
 import io.virtualapp.home.models.PackageAppData;
 import io.virtualapp.home.repo.PackageAppDataStorage;
 import jonathanfinerty.once.Once;
-import sk.vpkg.provider.BanNotificationProvider;
 
 /**
  * @author Lody
@@ -111,9 +106,6 @@ public class LoadingActivity extends VActivity {
         super.onCreate(savedInstanceState);
         try {
             start = SystemClock.elapsedRealtime();
-
-            if(!(new msVerify().chkSign(getResources().getString(R.string.about_info))))
-            {finish();return;}
             setContentView(R.layout.activity_loading);
             // loadingView = (EatBeansView) findViewById(R.id.loading_anim);
             int userId = getIntent().getIntExtra(KEY_USER, -1);
@@ -168,15 +160,6 @@ public class LoadingActivity extends VActivity {
                 ignored.printStackTrace();
             }
 
-            if(SKLockUtil.isAppNeedPwd(appModel.packageName,0))
-            {
-                Intent vIntent = new Intent(this, SKAppLock.class);
-                vIntent.putExtra(SKAppLock.ExtAppNameTag,appModel.name);
-                vIntent.putExtra(SKAppLock.ExtAppPkgTag,appModel.packageName);
-                SKAppLock.callbackX = xLockCallback;
-                startActivity(vIntent);
-            }
-            else
             {
                 checkAndLaunch(intent, userId);
             }
@@ -314,26 +297,8 @@ public class LoadingActivity extends VActivity {
             } else {
                 // 提示用户，targetSdkVersion < 23 无法使用运行时权限
                 final String tag = "permission_tips_" + appModel.packageName.replaceAll("\\.", "_");
-                if (BanNotificationProvider.getString(this,tag)==null) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert)
-                            .setTitle(android.R.string.dialog_alert_title)
-                            .setMessage("You denied permission!"+appModel.name)
-                            .setPositiveButton("OK", (dialog, which) -> {
-                                BanNotificationProvider.save(this,tag,"checked");
-                                launchActivityWithDelay(intentToLaunch, userToLaunch);
-                                finish();
-                            })
-                            .create();
-                    try {
-                        alertDialog.show();
-                    } catch (Throwable ignored) {
-                        // BadTokenException.
-                        Toast.makeText(this, "启动失败", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    launchActivityWithDelay(intentToLaunch, userToLaunch);
-                    finish();
-                }
+                launchActivityWithDelay(intentToLaunch, userToLaunch);
+                finish();
             }
         }
     }
@@ -343,21 +308,6 @@ public class LoadingActivity extends VActivity {
 
         @Override
         public void onAppOpened(String packageName, int userId) throws RemoteException {
-            finish();
-        }
-    };
-
-    private final SKAppLockCallBack xLockCallback = new SKAppLockCallBack()
-    {
-        @Override
-        public void afterThingDone()
-        {
-            checkAndLaunch(intentBuffer,uidBuffer);
-        }
-
-        @Override
-        public void afterFailed()
-        {
             finish();
         }
     };

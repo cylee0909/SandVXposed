@@ -14,8 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import sk.vpkg.location.SKLocation;
-import sk.vpkg.location.getPkgLocation;
 
 /**
  * @author Lody
@@ -36,14 +34,12 @@ public class VirtualLocationService implements IVirtualLocationManager {
         VCell cell;
         List<VCell> allCell;
         List<VCell> neighboringCell;
-        SKLocation location;
 
         public void set(VLocConfig other) {
             this.mode = other.mode;
             this.cell = other.cell;
             this.allCell = other.allCell;
             this.neighboringCell = other.neighboringCell;
-            this.location = other.location;
         }
 
         VLocConfig() {
@@ -60,7 +56,6 @@ public class VirtualLocationService implements IVirtualLocationManager {
             dest.writeParcelable(this.cell, flags);
             dest.writeTypedList(this.allCell);
             dest.writeTypedList(this.neighboringCell);
-            dest.writeParcelable(this.location, flags);
         }
 
         VLocConfig(Parcel in) {
@@ -68,7 +63,6 @@ public class VirtualLocationService implements IVirtualLocationManager {
             this.cell = in.readParcelable(VCell.class.getClassLoader());
             this.allCell = in.createTypedArrayList(VCell.CREATOR);
             this.neighboringCell = in.createTypedArrayList(VCell.CREATOR);
-            this.location = in.readParcelable(SKLocation.class.getClassLoader());
         }
 
         public static final Creator<VLocConfig> CREATOR = new Creator<VLocConfig>() {
@@ -142,31 +136,7 @@ public class VirtualLocationService implements IVirtualLocationManager {
     }
 
     private VLocConfig getOrCreateConfig(int userId, String pkg) {
-        if(!is_search)
-        {
-            theFckLoc = getPkgLocation.getLocFromPkg(pkg);
-            is_search = true;
-        }
-        Map<String, VLocConfig> pkgs = mLocConfigs.get(userId);
-        if (pkgs == null) {
-            pkgs = new HashMap<>();
-            mLocConfigs.put(userId, pkgs);
-        }
-        VLocConfig config = pkgs.get(pkg);
-        if (config == null&&theFckLoc==null) {
-            config = new VLocConfig();
-            config.mode = MODE_CLOSE;
-            pkgs.put(pkg, config);
-        }
-        if(theFckLoc!=null)
-        {
-            config = new VLocConfig();
-            config.cell = new VCell();
-            config.location = theFckLoc;
-            config.mode = MODE_USE_SELF;
-            pkgs.put(pkg, config);
-            // sklocation
-        }
+        VLocConfig config = new VLocConfig();
         return config;
     }
 
@@ -250,39 +220,4 @@ public class VirtualLocationService implements IVirtualLocationManager {
                 return null;
         }
     }
-
-    @Override
-    public void setLocation(int userId, String pkg, SKLocation loc) {
-        getOrCreateConfig(userId, pkg).location = loc;
-        mPersistenceLayer.save();
-    }
-
-    protected SKLocation theFckLoc = null;
-    protected boolean is_search = false;
-
-    @Override
-    public SKLocation getLocation(int userId, String pkg) {
-        VLocConfig config = getOrCreateConfig(userId, pkg);
-        mPersistenceLayer.save();
-        switch (config.mode) {
-            case MODE_USE_SELF:
-                return config.location;
-            case MODE_USE_GLOBAL:
-                return mGlobalConfig.location;
-            case MODE_CLOSE:
-            default:
-                return null;
-        }
-    }
-
-    @Override
-    public void setGlobalLocation(SKLocation loc) {
-        mGlobalConfig.location = loc;
-    }
-
-    @Override
-    public SKLocation getGlobalLocation() {
-        return mGlobalConfig.location;
-    }
-
 }
