@@ -189,12 +189,12 @@ public class HomeActivity extends VActivity implements HomeContract.HomeView {
             AlertDialog.Builder hBuilder = new AlertDialog.Builder(HomeActivity.this);
             hBuilder.setTitle(R.string.restartapp).setMessage(R.string.ensurerestart);
             hBuilder.
-                    setNegativeButton("×", (dialog, which) ->
+                    setNegativeButton("取消", (dialog, which) ->
                     {
                         // 不做任何事情
                         return;
                     }) .
-                    setPositiveButton("√", (dialog, which) ->
+                    setPositiveButton("确认", (dialog, which) ->
                     {
                         VActivityManager.get().killAllApps();
                         Toast.makeText(this,R.string.restartfinish,Toast.LENGTH_LONG).show();

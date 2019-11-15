@@ -43,7 +43,7 @@
     <string name="SK_Thecoming">咕咕咕</string>
     <string name="back">返回</string>
     <string name="restartapp">重启所有应用</string>
-    <string name="restartfinish">重启应用只需要一秒，是不是很牛逼呢？</string>
+    <string name="restartfinish">重启成功！</string>
     <string name="SKRestartTips">更改设置以后点击主页菜单->重启所有应用来让设置生效。</string>
     <string name="ensurerestart">真的要重启吗？请确保已经保存好数据。</string>
     <string name="manualpath">手动选择路径安装</string>
